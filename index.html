@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Traker</h1>
+        <div class="budget-input">
+            <label for="budget-amount">Saisissez le budget:</label>
+            <input type="number" id="budget-amount" placeholder="Saisissez votre budget">
+            <button id="set-budget-btn">Fixer le budget</button>
+        </div>
+
+        <div class="balance-container">
+            <div>
+                <h3>Budget</h3>
+                <p id="budget-value">0 FCFA</p>
+            </div>
+            <div>
+                <h3>Dépenses</h3>
+                <p id="expense-value">0 FCFA</p>
+            </div>
+            <div>
+                <h3>Solde</h3>
+                <p id="balance-value">0 FCFA</p>
+            </div>
+        </div>
+
+        <div class="expense-input">
+            <label for="expense-title">Intitulé de la dépense :</label>
+            <input type="text" id="expense-title" placeholder="Indiquer l'intitulé de la dépense">
+            <label for="expense-amount">Montant de la dépense :</label>
+            <input type="number" id="expense-amount" placeholder="Saisir le montant de la dépense">
+            <button id="add-expense-btn">Ajouter une dépense</button>
+        </div>
+
+        <div class="expense-list-container">
+            <h2>Liste des dépenses</h2>
+            <div class="expense-list-header">
+                <p class="header-item">Dépense</p>
+                <p class="header-item">Montant</p>
+                <p class="header-item">Actions</p>
+            </div>
+            <ul id="expense-list"></ul>
+        </div>
+
+        <div id="error-message" class="error hidden">Erreur : Veuillez saisir des données valides !</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

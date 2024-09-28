@@ -1,0 +1,182 @@
+body {
+    font-family: Poppins, Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.budget-input,
+.expense-input {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.balance-container div {
+    text-align: center;
+    width: 30%;
+    overflow: hidden; /* Ajouté pour gérer le débordement */
+}
+
+.balance-container h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#budget-value,
+#expense-value,
+#balance-value {
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden; /* Ajouté pour gérer le débordement */
+    text-overflow: ellipsis; /* Ajouté pour ajouter des points de suspension */
+    white-space: nowrap; /* Ajouté pour éviter le retour à la ligne */
+    text-align: right; /* Aligné à droite pour une meilleure présentation des montants */
+}
+
+.expense-list-container {
+    margin-top: 20px;
+}
+
+.expense-list-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header-item {
+    width: 30%;
+    text-align: center;
+}
+
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expense-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ajouté pour gérer le débordement */
+}
+
+.expense-item p {
+    margin: 0;
+    overflow: hidden; /* Ajouté pour gérer le débordement */
+    text-overflow: ellipsis; /* Ajouté pour ajouter des points de suspension */
+    white-space: nowrap; /* Ajouté pour éviter le retour à la ligne */
+}
+
+.expense-item .product {
+    flex: 1;
+    font-weight: bold;
+}
+
+.expense-item .amount {
+    font-size: 16px;
+    color: #333;
+    text-align: right; /* Aligné à droite pour une meilleure présentation des montants */
+}
+
+.expense-item button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.expense-item button:hover {
+    color: #007bff;
+}
+
+.expense-item button.edit {
+    color: #ffc107;
+}
+
+.expense-item button.delete {
+    color: #dc3545;
+}
+
+.expense-item button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.expense-item button:hover {
+    background-color: #e9ecef;
+}
+
+.error {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
